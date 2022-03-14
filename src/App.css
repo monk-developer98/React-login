@@ -1,38 +1,248 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: poppins, sans-serif;
+}
+
+.REG_Container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FORM{
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.226);
+  width: 30rem;
+  /* height: 60%; */
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.head{
+  font-size: 1.5rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.inputF{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.65rem;
+}
+.inputF label{
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.inputF input, .inputF select{
+  outline: none;
+  border: 1px solid #363636;
+  padding: 0.6rem 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.FORM button{
+  margin: 1rem 0;
+  cursor: pointer;
+  border: 1px solid #363636;
+  background-color: #363636;
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0.5rem;
+  transition: 300ms all ease;
+}
+.FORM button:hover{
+  background-color: #fff;
+  color: #363636;
+  font-weight: 500;
+}
+
+.log{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.log a{
+  text-decoration: none;
+  font-weight: 700;
+  color: #f95959;
+}
+.navbar{
+  box-shadow: 0px 3px 10px rgba(128, 128, 128, 0.226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  position:fixed;
+  width: 100%;
+  height: 65px;
+  z-index: 100;
+  background-color: #fff;
+}
+.BTNS{
+  display: flex;
+}
+.navbar h1{
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin-left: 2rem;
+}
+.navbar h1 span{
+  font-size: 2.5rem;
+  position: relative;
+  bottom: 0.2rem;
+  margin-right: 0.3rem;
+}
+.navbar button{
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  background: #363636;
+  border: 1px solid #363636;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+.navbar button span{
+  position: relative;
+  bottom: 0.1rem;
+  margin-left: 0.5rem;
+}
+.C_INFO{
+  position: absolute;
+  box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.575);
+  display: flex;
+  flex-direction: column;
+  right: 20px;
+  top: 70px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+}
+.C_INFO span{
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+.C_INFO span span{
+  font-weight: 500;
+  margin-left: 0.2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.M_container{
+  height: 50%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* padding: 1rem; */
+  gap: 2rem;
+  margin: 1rem;
+  margin-top: 6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.M_card{
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.267);
+  width: 520px;
+  padding: 0.7rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+}
+.primary{
+  display: flex;
+}
+.votes{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+.votes > span{
+  font-size: 1.1rem;
+  color: #363636;
+}
+.votes > div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: -1.5rem;
+}
+.votes > div span{
+  font-size: 4.5rem;
+}
+.votes > div span:nth-child(2){
+  font-size: 2rem;
+  margin: -1rem 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.poster img{
+  margin-left: 0.5rem;
+  width: 120px;
+  height: 176.7px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.397);
+}
+.M_info{
+  margin-left: 1rem;
+  display:flex;
+  flex-direction: column;
+}
+.M_info h3{
+  font-family:'Times New Roman', Times, serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+.M_info > span{
+  color: #393e46bd;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  display: flex;
+}
+.M_info > span span{
+  color: #000;
+  font-weight: 500;
+  margin-left: 0.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.M_info .mins{
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+.M_info .people{
+  color: #22b2da;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.M_card button{
+  background-color: #22b2da;
+  border: 1px solid #22b2da;
+  color: #fff;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 0.5rem;
 }
