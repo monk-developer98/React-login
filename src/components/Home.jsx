@@ -15,14 +15,12 @@ const Home = () => {
     var DATA = formData
 
     await axios.post('https://hoblist.com/api/movieList',DATA).then(res=>{
-      // console.log(res.data.result);
       setData(res.data.result)
     }).catch(err=>{
       console.log(err);
     })
   }, []);
 
-  console.log("data", data);
 
   const LogOut =()=>{
     localStorage.setItem('is_logged_in',false)
@@ -31,12 +29,12 @@ const Home = () => {
   return (
     <div className="HOME_PAGE">
       <div className="navbar">
-        <h1><span class="material-icons-outlined">live_tv</span>Mov!es</h1>
+        <h1><span className="material-icons-outlined">live_tv</span>Mov!es</h1>
 
         <div className="BTNS">
-          <button onClick={()=>setToggle(!toggle)}>Company Info <span class="material-icons-outlined">{toggle?'close':'menu'}</span></button>
+          <button onClick={()=>setToggle(!toggle)}>Company Info <span className="material-icons-outlined">{toggle?'close':'menu'}</span></button>
 
-          <button onClick={LogOut}><span class="material-icons-outlined" style={{marginLeft:'0'}}>logout</span></button>
+          <button onClick={LogOut}><span className="material-icons-outlined" style={{marginLeft:'0'}}>logout</span></button>
         </div>
        
         <div className="C_INFO" style={{display:toggle?'flex':'none'}}>
@@ -53,9 +51,9 @@ const Home = () => {
               <div className="primary">
                 <div className="votes">
                   <div>
-                    <span class="material-icons-outlined">arrow_drop_up</span>
+                    <span className="material-icons-outlined">arrow_drop_up</span>
                       <span>1</span>
-                    <span class="material-icons-outlined">arrow_drop_down</span>
+                    <span className="material-icons-outlined">arrow_drop_down</span>
                   </div>
                   <span>Votes</span>
                 </div>

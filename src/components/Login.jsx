@@ -12,22 +12,30 @@ const Login = () => {
     setlogin({ ...login, [name]: value });
   };
 
+  
+
   const SUBMIT = (e) => {
     e.preventDefault();
 
-    let mail = JSON.parse(localStorage.getItem(`${login.email}`)).email;
-    let pass = JSON.parse(localStorage.getItem(`${login.email}`)).password;
+      var DATA_USER = JSON.parse(localStorage.getItem(`${login.email}`)) == null ? false : JSON.parse(localStorage.getItem(`${login.email}`))
 
-        
-    if (login.password === pass && login.email === mail) {
-        localStorage.setItem('is_logged_in',true)
-        window.location.href = '/home'    
-    }else{
-        alert('Invaild details')
-    }
-    
+      if(DATA_USER){
+        var pass = DATA_USER.password
+        if(login.password!==pass){
+          alert('Password Or Email is Wrong')
+        }else{
+          localStorage.setItem('is_logged_in',true)
+          window.location.href='/home'
+        }
+       
+      }else{
+        alert('User Not Found! Please Sign Up')
+        return false
+      }
+
   };
 
+  console.log(login.email);
   return (
     <div className="REG_Container">
      

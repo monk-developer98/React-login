@@ -17,9 +17,9 @@ const Register = () => {
 
   const SUBMIT = (e) => {
     e.preventDefault();
-
+    alert('User Successfully Logged In')
     localStorage.setItem(`${register.email}`,JSON.stringify(register))
-    window.location.reload();
+    window.location.href='/'
   };
  
   return (
